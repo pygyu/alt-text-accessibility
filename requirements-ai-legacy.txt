@@ -1,0 +1,2 @@
+# Legacy SDK used by the 2023 implementation. Availability/platform support may vary.
+azure-ai-vision==0.15.1b1

@@ -1,0 +1,5 @@
+Django>=4.2,<4.3
+Pillow
+python-dotenv
+openai>=1,<2
+requests

@@ -1,0 +1,17 @@
+<!-- templates/azure_image_analyzer/analyze_image.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analyze Image</title>
+</head>
+<body>
+    <h1>Analyze Image</h1>
+    <form method="post" enctype="multipart/form-data" action="{% url 'analyze_image' %}">
+        {% csrf_token %}
+        <label for="image">Select Image:</label>
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Analyze</button>
+    </form>
+</body>
+</html>

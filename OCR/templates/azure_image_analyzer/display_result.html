@@ -1,0 +1,21 @@
+<!-- templates/azure_image_analyzer/display_result.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Analysis Result</title>
+</head>
+<body>
+    <h1>Image Analysis Result</h1>
+    <img src="{{ result.image.url }}" alt="Analyzed Image">
+    <p>Description: {{ result.description }}</p>
+    <pre>Azure AI Response: {{ result.azure_response|json_script:"azure_response" }}</pre>
+
+    {% if result.summary %}
+        <h2>Summary:</h2>
+        <p>{{ result.summary }}</p>
+    {% else %}
+        <a href="{% url 'summarize_text' result.id %}">Generate Summary</a>
+    {% endif %}
+</body>
+</html>
